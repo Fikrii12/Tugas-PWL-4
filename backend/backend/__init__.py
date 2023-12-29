@@ -31,8 +31,6 @@ def main(global_config, **settings):
         config.add_route('save_movie', '/api/save_product', request_method='POST')
         config.add_route('get_movies', '/api/get_movies', request_method='GET')
         config.add_route('delete_movie', '/api/delete_movie/{name}')
-        # config.add_route('get_products', '/api/get_products',  request_method='GET')
-        # config.add_route('hapus_produk', '/api/hapus_produk', request_method='DELETE')
         config.include('.routes')
         config.scan()
     return config.make_wsgi_app()
