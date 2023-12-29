@@ -24,7 +24,7 @@ def save_product(request):
         namaFilm = data['movieName']
         gambar = request.POST['image'].file
 
-        save_path = f'../src/assets/img/produk/{namaFilm}.png'
+        save_path = f'../src/assets/img/movie/{namaFilm}.png'
         with open(save_path, 'wb') as f:
             f.write(gambar.read())
 
